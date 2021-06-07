@@ -81,7 +81,7 @@ ONBUILD ADD . /app/user/
 ONBUILD RUN cat composer.json | python -c 'import sys,json; sys.exit("post-install-cmd" not in json.load(sys.stdin).get("scripts", {}));' && composer run-script post-install-cmd || true
 
 # TODO: run "composer compile", like Heroku?
-RUN composer update --no-scripts
+RUN composer install --no-scripts
 RUN composer dump-autoload -o
 
 CMD php artisan serve --host=0.0.0.0 --port=8080
