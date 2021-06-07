@@ -9,7 +9,6 @@ ENV HTTPD_VERSION 2.4.17
 ENV NGINX_VERSION 1.8.0
 
 # Create some needed directories
-RUN mkdir -p /app/.heroku/php /app/.profile.d
 WORKDIR /www/var
 COPY . /www/var
 
