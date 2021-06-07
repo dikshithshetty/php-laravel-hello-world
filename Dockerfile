@@ -82,7 +82,7 @@ ONBUILD RUN cat composer.json | python -c 'import sys,json; sys.exit("post-insta
 
 # TODO: run "composer compile", like Heroku?
 
-CMD php artisan serve --host=0.0.0.0 --port=8181
+CMD php artisan serve --host=0.0.0.0 --port=8080
 EXPOSE 8080
 
 # ENTRYPOINT ["/usr/bin/init.sh"]
